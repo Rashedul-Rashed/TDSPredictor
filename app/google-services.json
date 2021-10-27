@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "334359453620",
+    "firebase_url": "https://tds-predictor-default-rtdb.firebaseio.com",
+    "project_id": "tds-predictor",
+    "storage_bucket": "tds-predictor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334359453620:android:811fd512f075683cebdce1",
+        "android_client_info": {
+          "package_name": "com.example.tdspredictor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334359453620-btcmfqc2pdgo3bic769gqvhk14t9tesr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp4Z9IgRqyTgkklcZ9C5TEyNdQWwUwfIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334359453620-btcmfqc2pdgo3bic769gqvhk14t9tesr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

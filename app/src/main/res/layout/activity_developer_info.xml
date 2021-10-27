@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#010B13"
+    tools:context=".DeveloperInfo">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Developers Info"
+        android:background="@color/design_default_color_secondary"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:layout_margin="5dp"
+        />
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Instructor : Mr. Md. Reduanul Haque"
+        android:textSize="25sp"
+        />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Designation :Sr. Lecturer, CSE, FSIT."
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Daffodil International Univesity"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Developers : "
+        android:background="@color/design_default_color_secondary"
+        android:textSize="25sp"
+        />
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="1.Rashedul Islam         181-15-1879"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="2.Abu Abdullah Nisat  181-15-1878"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="3.Atikur Rahman          181-15-2024"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Thanks For Using Our App!"
+        android:textSize="27sp"
+        android:textAlignment="center"
+        />
+
+
+</LinearLayout>

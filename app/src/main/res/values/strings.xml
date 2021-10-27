@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TDS Predictor</string>
+    <string name="tds_tester">TDS TESTER</string>
+    <string name="welcome">WELCOME</string>
+    <string name="Instruction">Input the reading from your TDS Tester!!!</string>
+    <string name="input_the_value">Input The Value</string>
+    <string name="next">Next</string>
+    <string name="about_app">About App</string>
+</resources>
