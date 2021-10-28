@@ -12,14 +12,20 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.appcheck.FirebaseAppCheck;
+import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,16 +35,24 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     private String time;
-
+    String todaysDate;
+    Calendar c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FirebaseApp.initializeApp(this);
+        FirebaseAppCheck firebaseAppCheck = FirebaseAppCheck.getInstance();
+        firebaseAppCheck.installAppCheckProviderFactory(
+                DebugAppCheckProviderFactory.getInstance());
 
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("TDS VALUE");
+        c = Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        todaysDate = dateFormat.format(c.getTime());
+
 
 
         et = findViewById(R.id.inputEditText);
@@ -50,8 +64,13 @@ public class MainActivity extends AppCompatActivity {
     public void ShowResult(View view) {
         String value = et.getText().toString();
         time = this.getTimeAmandPm();
-        myRef.setValue(value);
-        myRef.setValue(time);
+
+        HashMap<String, Long> data = new HashMap<>();
+
+        data.put("time" , System.currentTimeMillis());
+        data.put("data" , Long.parseLong(value));
+
+        database.getReference(todaysDate).child(Long.toString(System.currentTimeMillis())).setValue(data);
 
         if (value.isEmpty()) {
             et.setError("Please Enter a value!!");
